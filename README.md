@@ -10,7 +10,7 @@ if there is a problem cantact me using my email address: sh.dalirian@ut.ac.ir<br
 my linkedin profile address is : linkedin.com/in/sh-d-30174b77 <br/>
 ## run: main.py
 the main function in this application is:<br/>
-background_color(img,background_ratio:int=50,dist:int=50,sensivity:str="uniform",black_color=np.uint8([[45,47,60]]),white_color=np.uint8([[215,215,225]])) <br/>
+#background_color(img,background_ratio:int=50,dist:int=50,sensivity:str="uniform",black_color=np.uint8([[45,47,60]]),white_color=np.uint8([[215,215,225]]))# <br/>
 The background_color function is called to detect the background. here we suppose there just two type of background color but you easily can add more.<br/>
 According to above, this function has five inputs.<br/>
 1. img: The first input is an image whose background is to be detected.<br/>
@@ -31,4 +31,4 @@ here is some examples:<br />
 ### example 1:
 here we wnat to detect black background of image and replace it with ideal black color (0,0,0).<br/>
 original image is:<br />!["original image"](images/0.jpg)<br /><br />
-improved background image is:<br />![cleaned image](images/0_removedbackground_uniform.jpg)<br /><br />
+improved black background image is:<br />![cleaned image](images/0_removedbackground_uniform.jpg)<br /><br />
