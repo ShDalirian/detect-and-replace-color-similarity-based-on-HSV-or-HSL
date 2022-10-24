@@ -1,30 +1,6 @@
 import numpy as np
 import cv2
 
-#__all__ = ["background_color","color_similarity_HSV","color_dist","avr_HSV"]
-def background_color(img,background_ratio:int=50,dist:int=50,sensivity:str="uniform",black_color=np.uint8([[45,47,60]]),white_color=np.uint8([[215,215,225]])):
-    is_background_black:bool=False
-    is_background_white:bool=False
-    b_ratio=max(50,background_ratio)
-    w_ratio=max(50,background_ratio)
-    ideal_color1=black_color
-    ideal_color2=white_color
-    total_pixels = img.shape[0]*img.shape[1]
-    b_converted_img,Black_pixels=color_similarity_HSV(img,ideal_color1,[0,0,0],distance=dist,sensivity=sensivity)
-    w_converted_img,white_pixels=color_similarity_HSV(img,ideal_color2,[0,0,255],distance=dist,sensivity=sensivity)
-    if ((Black_pixels/total_pixels)>(b_ratio/100)) and ((white_pixels/total_pixels)<(w_ratio)/100):
-        is_background_black = True
-        final_img=b_converted_img
-        print("background is black")
-    if ((Black_pixels/total_pixels)<(b_ratio/100)) and ((white_pixels/total_pixels)>(w_ratio)/100):
-        is_background_white = True
-        final_img=w_converted_img
-        print("background is white")
-    if ((Black_pixels/total_pixels)<(b_ratio/100)) and ((white_pixels/total_pixels)<(w_ratio)/100):
-        print("background is not niether white nor black")
-        final_img=img
-    return is_background_black,is_background_white,final_img
-
 def color_similarity_HSV(img,specific_colors,ideal_color=[0,0,255],distance:int=15,sensivity:str="uniform",limit_other_colors:bool=False):
     center=np.array([img.shape[0]//2,img.shape[1]//2])
     converted_img=cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
