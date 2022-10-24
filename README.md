@@ -1,4 +1,4 @@
-# continuously clean image to extracte only Meaningful pixels
+# detect (and replace) a specific **HSV_based or HSL_based** color Considering the maximum difference in HSV instead of RGB values
 first of all i apologize for my english. I am an electrical engineering PhD student in university of Tehran, Iran.<br/> 
 this code is an extraction of color similarity based on HSV parameters which is closer to the similarity of color in the human concept.<br/>
 here we accept a few difference between ideal color and pixel color.<br/>
@@ -10,7 +10,7 @@ if there is a problem cantact me using my email address: sh.dalirian@ut.ac.ir<br
 my linkedin profile address is : linkedin.com/in/sh-d-30174b77 <br/>
 ## run: main.py
 the main function in this application is:<br/>
-#background_color(img,background_ratio:int=50,dist:int=50,sensivity:str="uniform",black_color=np.uint8([[45,47,60]]),white_color=np.uint8([[215,215,225]]))# <br/>
+**background_color(img,background_ratio:int=50,dist:int=50,sensivity:str="uniform",black_color=np.uint8([[45,47,60]]),white_color=np.uint8([[215,215,225]]))** <br/>
 The background_color function is called to detect the background. here we suppose there just two type of background color but you easily can add more.<br/>
 According to above, this function has five inputs.<br/>
 1. img: The first input is an image whose background is to be detected.<br/>
