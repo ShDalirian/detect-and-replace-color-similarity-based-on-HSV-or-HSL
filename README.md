@@ -1,11 +1,11 @@
-# detect (and replace) a specific **HSV_based or HSL_based** color Considering the maximum difference in HSV instead of RGB values
+# detect (and replace) a specific **HSV_based or HSL_based** background color Considering the maximum difference in HSV instead of RGB values
 first of all i apologize for my english. I am an electrical engineering PhD student in university of Tehran, Iran.<br/> 
 this code is an extraction of color similarity based on HSV parameters which is closer to the similarity of color in the human concept.<br/>
 here we accept a few difference between ideal color and pixel color.<br/>
 Considering that the photos were taken in the real environment, as a result the background will not be completely black or white and etc.<br/> 
 As a result, using offline or online color-pickers, we can earn the actual color of the background.<br/> 
 In this coding, the internet address https://imageresizer.com/color-picker is used to extract the colors, but as mentioned, there are different methods to extract the color of the image.<br/> 
-It should also be noted that due to the fact that color extraction is more available in RGB format, the user does not need to extract HSV values, but simply extracting color values ​​in RGB format is sufficient. Color conversion from RGB to HSV is done automatically in the code.
+It should also be noted that due to the fact that color extraction is more available in RGB format, the user does not need to extract HSV values, but simply extracting color values ​​in RGB format is sufficient. Color conversion from RGB to HSV is done automatically in the code.<br/>
 if there is a problem cantact me using my email address: sh.dalirian@ut.ac.ir<br/>
 my linkedin profile address is : linkedin.com/in/sh-d-30174b77 <br/>
 ## run: main.py
