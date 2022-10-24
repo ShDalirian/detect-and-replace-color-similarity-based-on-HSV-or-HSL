@@ -14,7 +14,6 @@ black_RGB_sample1=[[29,29,39],[30,29,37],[28,28,38],[48,47,61],[53,52,70],[53,52
 # there is a lot of web page for pick color of image's pixcels. for example i use this web page: https://imageresizer.com/color-picker
 black_RGB_sample2=[[109,100,96],[109,99,97],[110,108,103],[117,105,97]]
 black_HSV= np.vstack((avr_HSV(black_RGB_sample1),avr_HSV(black_RGB_sample2)))
-#black_HSV= avr_HSV(black_RGB_sample1)
 white_HSV= avr_HSV(white_RGB_sample)
 
 image_name  = "0.jpg"
@@ -23,4 +22,10 @@ image_path = image_folder+image_name
 loaded_image = cv2.imread(image_path)
 is_background_black:bool=False
 is_background_white:bool=False
-is_background_black,is_background_white = background_color(loaded_image,background_ratio=70,dist=50, black_color=black_HSV, white_color=white_HSV)
+Sensivity="uniform"
+is_background_black,is_background_white,final_img = background_color(loaded_image,background_ratio=70,dist=40,sensivity=Sensivity, black_color=black_HSV, white_color=white_HSV)
+
+#final_img=cv2.cvtColor(final_img, cv2.COLOR_GRAY2BGR)
+cv2.imshow("final",final_img)
+cv2.waitKey(0)
+cv2.imwrite(image_path[0:-4]+"_removedbackground_"+Sensivity+image_path[-4:], final_img)
