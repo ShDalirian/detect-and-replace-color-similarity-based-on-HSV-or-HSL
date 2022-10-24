@@ -5,7 +5,7 @@ here we accept a few difference between ideal color and pixel color.<br/>
 Considering that the photos were taken in the real environment, as a result the color in all pixels are not exactly the same color .<br/> 
 As a result, using offline or online color-pickers, we can earn the actual color of specified color.<br/> 
 In this coding, the internet address https://imageresizer.com/color-picker is used to extract the colors, but as mentioned, there are different methods to extract the color of the image.<br/> 
-It should also be noted that due to the fact that color extraction is more available in RGB format, the user does not need to extract HSV values, but simply extracting color values ​​in RGB format is sufficient. Color conversion from RGB to HSV is done automatically in the code.<br/>
+It should also be noted that due to the fact that color extraction is more available in RGB format, the user does not need to extract HSV values, but simply extracting color values ​​in RGB format is sufficient. Color conversion from RGB to HSV is done automatically in the code.
 if there is a problem cantact me using my email address: sh.dalirian@ut.ac.ir<br/>
 my linkedin profile address is : linkedin.com/in/sh-d-30174b77 <br/>
 ## run: main.py
